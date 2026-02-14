@@ -9,7 +9,13 @@ import ContactList from './components/ContactList'
 const fetchInitialContacts = (): Promise<Contact[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve([]);
+      // Try to load contacts from localStorage first
+      const savedContacts = localStorage.getItem('contacts');
+      if (savedContacts) {
+        resolve(JSON.parse(savedContacts));
+      } else {
+        resolve([]);
+      }
     }, 2000); // Simulate 2 second delay
   });
 };
@@ -25,6 +31,13 @@ function App() {
       setLoading(false);
     });
   }, []);
+
+  // Save contacts to localStorage whenever they change
+  useEffect(() => {
+    if (!loading) {
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    }
+  }, [contacts, loading]);
 
   const handleAddContact = (name: string, phone: string) => {
     const newContact: Contact = {
@@ -42,8 +55,9 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Contact Manager</h1>
-        <p>Manage your contacts easily</p>
+        <img src="/logoapp.png" alt="ConectaFácil Logo" className="app-logo" />
+        <h1>ConectaFácil</h1>
+        <p>Administra tus contactos de manera sencilla</p>
       </header>
 
       {loading ? (

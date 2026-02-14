@@ -1,19 +1,36 @@
-# React + TypeScript + Vite
+# ConectaFácil - Administrador de Contactos PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+App PWA para gestionar contactos. Los contactos se guardan automáticamente en el navegador.
 
-Currently, two official plugins are available:
+##  Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**URL:** [[Contacto Facil](https://easycontacts-dev.netlify.app/)]
 
-## React Compiler
+##  Instalar en Celular (Chrome)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Abre el link en Chrome de tu celular
+2. Toca el menú (3 puntos) → **"Agregar a pantalla de inicio"** o **"Instalar app"**
+3. Dale **"Instalar"**
+4. Listo! Ya tienes la app en tu celular
 
-## Expanding the ESLint configuration
+##  Deploy en Netlify
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Corre `npm run build`
+2. Entra a [netlify.com](https://www.netlify.com/)
+3. Arrastra la carpeta `dist` 
+4. Copia el link que te da Netlify
+5. Abre el link en tu celular e instala la app
+
+##  Desarrollo Local
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+Desarrollado para el curso de Desarrollo Móvil
 
 ```js
 export default defineConfig([

@@ -2,6 +2,8 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  background-color: #ffffff;
+  min-height: 100vh;
 }
 
 .app-header {
@@ -9,6 +11,13 @@
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 2px solid #e0e0e0;
+}
+
+.app-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  object-fit: contain;
 }
 
 .app-header h1 {
