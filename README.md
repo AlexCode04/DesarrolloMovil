@@ -50,3 +50,5 @@ npx cap run android
 
 - Si cambias variables de entorno, vuelve a correr `npm run build` antes de `npx cap run android`.
 - Si no aparecen permisos (camara/GPS), revisa permisos de la app en Ajustes del telefono.
+
+DRIVE CON LAS FOTO DE PRUEBAS: https://drive.google.com/drive/folders/1-hlWXrc5g8Mh5SA9fIMkmi_VzNlJ-Ftq?usp=sharing
